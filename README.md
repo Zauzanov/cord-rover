@@ -4,9 +4,16 @@
 ```bash
 sudo python coro.py
 ```
-## Use telnet to test the script:
+## We will use telnet to simulate a manual SMTP login to Metasploitable2:
 ```bash
-telnet
+telnet [META2_IP] 25
+```
+## Once connected, type the following (the SMTP server will respond to each line):
+```bash
+HELO test.com
+AUTH LOGIN
+USER admin
+PASS password123
 ```
 <br>
 <br>
