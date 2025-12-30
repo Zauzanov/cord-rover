@@ -12,7 +12,8 @@ sudo python coro.py
 [*] Destination: 192.168.204.129
 [*] b'PASS mygreatpassword\n'
 ```
-Here our client is attempting to log in to server 192.168.204.129 and send credentials over the network in plain text.
+Here our client is attempting to log in to server 192.168.204.129 and send credentials over the network in plain text.<br>
+if a packet arrives without a payload (like a standard TCP ACK), the variable `mypacket` will not be defined, causing the script to crash with an `UnboundLocalError`.
 <br>
 <br>
 **Note**: the BPF filter can be edited to monitor other traffic: for example, to monitor FTP connections and credentials, change it to `tcp port 21` in `coro.py` file. 
